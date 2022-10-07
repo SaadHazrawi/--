@@ -123,7 +123,7 @@
      background-size: cover;
      z-index: -1;
      animation: herobackgrond 2s ease-in;
-     -webkit-animation: herobackgrond 2s ease-in;
+     -webkit-animation: herobackgrond 4s ease-in;
  }
 
  .content {
@@ -228,6 +228,7 @@
      background-color: #bcccdc;
      padding: 4rem 0;
      width: 30%;
+     overflow: hidden;
  }
 
  .box h3 {
@@ -235,6 +236,11 @@
      text-align: center;
      font-size: 2.2rem;
      margin: 0%;
+     z-index: 9;   transition: 1s ease-in;
+     -webkit-transition: 1s ease-in;
+     -moz-transition: 1s ease-in;
+     -ms-transition: 1s ease-in;
+     -o-transition: 1s ease-in;
  }
 
  .box .header-box {
@@ -247,14 +253,32 @@
      font-size: 2.2rem;
      margin-right: 10px;
      color: #27ab83;
- }
+     transition: 1s ease-in;
+     -webkit-transition: 1s ease-in;
+     -moz-transition: 1s ease-in;
+     -ms-transition: 1s ease-in;
+     -o-transition: 1s ease-in;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+}
 
+ .box:hover i{
+    box-shadow: 1px 100px 48px 253px #27ab83;
+      color: white;
+      background-color: black;
+ }
+ .box:hover h3   {
+    color: white;
+ }
  .box p {
      text-align: center;
      width: 70%;
      margin: 1rem auto;
      color: #243b53;
-     font-size: 1.6rem;
+     font-size: 1.8rem;
  }
 
  /* about us */
@@ -353,11 +377,15 @@
 
  /* animation */
  @keyframes herobackgrond {
-     from {
+     0% {
          scale: 1.2;
      }
 
-     to {
+     50% {
          scale: 1;
+     }
+
+     100% {
+         scale: 1.2;
      }
  }
